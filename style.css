@@ -1,0 +1,211 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  backdrop-filter: blur(6px);
+}
+
+header h1 {
+  color: #c4a2ff;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff4d4d;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  height: 100vh;
+  background: url('assets/me.png') center center / 80% no-repeat;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 5%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1 {
+  position: relative;
+  font-size: 3.2rem;
+  color: #fff;
+  z-index: 1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.hero h1 span {
+  color: #ff4d4d;
+  text-shadow: 0 0 10px #ff4d4d;
+}
+
+.hero p {
+  position: relative;
+  color: #ccc;
+  z-index: 1;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.hero .btn {
+  position: relative;
+  margin-top: 25px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.hero .btn:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Laptops / Medium Screens */
+@media (max-width: 1200px) {
+  .hero {
+    background-size: 85%;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 12px 6%;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  .hero {
+    background-size: 90%;
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 12px 26px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero {
+    background-size: 100%;
+    background-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero .btn {
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .hero {
+    background-size: 115%;
+    background-position: center;
+    padding: 0 8%;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+}
