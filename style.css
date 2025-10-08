@@ -55,7 +55,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('assets/me.png') center/cover no-repeat;
+  background: url('your-image-link.jpg') center center / 80% no-repeat;
+  background-color: #000; /* keeps black edges consistent */
 }
 
 .overlay {
@@ -176,6 +177,7 @@ footer {
   padding: 20px 0;
   color: #888;
 }
+
 
 
 
