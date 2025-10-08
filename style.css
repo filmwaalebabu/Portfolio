@@ -51,12 +51,11 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1200&q=60')
-    center/cover no-repeat;
+  background: url('assets/me.png') center/cover no-repeat;
 }
 
 .overlay {
@@ -177,6 +176,7 @@ footer {
   padding: 20px 0;
   color: #888;
 }
+
 
 
 
